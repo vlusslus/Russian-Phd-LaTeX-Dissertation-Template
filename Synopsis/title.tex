@@ -6,9 +6,11 @@
     \IfFileExists{images/logo.pdf}{\includegraphics[height=2.5cm]{logo}}{\rule[0pt]{0pt}{2.5cm}}  & &
     \ifnumequal{\value{showperssign}}{0}{%
         \rule[0pt]{0pt}{1.5cm}
-    }{
-        \includegraphics[height=1.5cm]{personal-signature.png}
-    }\\
+    }
+	%{
+    %   \includegraphics[height=1.5cm]{personal-signature.png}
+    %}
+    \\
 \end{tabularx}
 
 \vspace{0pt plus1fill} %число перед fill = кратность относительно некоторого расстояния fill, кусками которого заполнены пустые места
@@ -87,9 +89,10 @@ r
     \defenseCouncilNumber,\par
     \defenseSecretaryRegalia
     &
-    \ifnumequal{\value{showsecrsign}}{0}{}{%
-        \includegraphics[width=2cm]{secretary-signature.png}%
-    }%
+    \ifnumequal{\value{showsecrsign}}{0}{}
+    %{
+    %    \includegraphics[width=2cm]{secretary-signature.png}%
+    %}
     &
     \defenseSecretaryFio
 \end{tabularx} 
